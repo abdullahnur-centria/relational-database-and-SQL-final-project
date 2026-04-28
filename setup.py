@@ -1,6 +1,6 @@
 import mysql.connector
 
-# 1. Connect to your new DBngin server (it has no password by default!)
+# 1. Connect to DBngin server (it has no password by default!)
 db = mysql.connector.connect(
     host="127.0.0.1",
     user="root",
