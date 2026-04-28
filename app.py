@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import messagebox, ttk
 import mysql.connector
 
-# Connect to your DBngin server
+# Connect to DBngin server
 def get_db():
     return mysql.connector.connect(
         host="127.0.0.1",
@@ -15,7 +15,7 @@ def add_product():
     name = entry_name.get()
     stock = entry_stock.get()
     
-    # 1. This is your INSERT command requirement
+    # 1. This is INSERT command requirement
     db = get_db()
     cursor = db.cursor()
     cursor.execute("INSERT INTO products (product_name, stock_count, supplier_id) VALUES (%s, %s, 1)", (name, stock))
@@ -27,7 +27,7 @@ def add_product():
     db.close()
 
 def show_inventory():
-    # 2. This is your JOIN requirement (combining 2 tables)
+    # 2. This is JOIN requirement (combining 2 tables)
     db = get_db()
     cursor = db.cursor()
     query = """
